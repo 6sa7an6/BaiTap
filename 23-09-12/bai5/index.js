@@ -2,14 +2,14 @@
 
 let max;
 let kiemTra = (a, b, c) => {
-    max = a;
-    if (a > b) {
-        max = b;
+let min = a;
+    if (min > b) {
+        min = b;
     }
-    if (b > c) {
-        max = c;
+    if (min > c) {
+        min = c;
     }
     return max;
 }
 kiemTra(4, 5, 6);
-console.log(`Số nhỏ nhất là : ${max}`);
+console.log(`Số nhỏ nhất là : ${min}`);
