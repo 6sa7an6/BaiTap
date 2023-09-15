@@ -3,7 +3,7 @@
 let string = ('abcdef1234')
 let arr = string.split('');
 let result = arr.filter(kiemTra = (item) => {
-    return isNaN(item)
+    return Number.isNaN(Number(item))
 })
 
 console.log(result.join(''));
