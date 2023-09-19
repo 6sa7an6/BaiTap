@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Phân biệt HTML collection và NodeList -->
+    <p>I.Giống nhau
+        1.Cùng là danh sách chứa các phần tử của HTML
+        2.Cùng thuộc dạng : là mảng nhưng không phải mảng.
+        - là mảng bởi vì có thể truy cập qua index như mảng ,
+        có thuộc tính length để lấy độ dài.
+        - không phải mảng vì không CRUD được như mảng vì dụ như các
+        method pop() , push() , shift()....
+
+
+        II.Khác nhau :
+        1.NodeList : 
+        -là kết quả trả về của querySelectorAll.
+        -Nodelist chứa mọi loại node.
+        -Nodelist chỉ truy cập được qua index.
+        2.HTML collection :
+        -là kết quả trả về khi lấy element theo class hoặc thẻ tag.
+        -HTML collection có thể truy cập bằng tên , id hoặc index.
+        -HTML collection chỉ chứa các element node.
+    </p>
+
+</body>
+</html>
