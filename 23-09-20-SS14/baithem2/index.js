@@ -9,7 +9,7 @@ render();
 clickPoint = (detail) => {
     for (let i = 1; i < 11; i++) {
         if (i == detail) {
-            document.getElementsByClassName('container__feedback__main__point')[0].innerHTML = `<p style = 'background-color : red'>${i}<p>`
+            document.getElementsByClassName('container__feedback__main__point')[0].innerHTML = `<p style = 'background-color : red'>${i}</p>`
         }
     }
 }
