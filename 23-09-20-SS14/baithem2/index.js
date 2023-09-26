@@ -6,11 +6,13 @@ render = () => {
     document.getElementsByClassName('container__point__list')[0].innerHTML = `${text}`
 }
 render();
+let number;
 clickPoint = (detail) => {
+    number = detail;
     for (let i = 0; i < 10; i++) {
         clickLi = document.getElementsByClassName('clickLi')
         if (detail - 1 == i) {
-            document.getElementsByClassName('container__feedback__main__point')[0].innerHTML = `<p style = 'background-color : red'>${i + 1}</p>`
+            /* document.getElementsByClassName('container__feedback__main__point')[0].innerHTML = `<p style = 'background-color : red'>${i + 1}</p>` */
             clickLi[i].style = 'background-color : red'
         } else {
             clickLi[i].style = 'background-color : beige'
@@ -25,7 +27,7 @@ clickPoint = (detail) => {
          */
     }
 }
-let clickButton = document.getElementsByClassName('container__review__button')[0];
+/* let clickButton = document.getElementsByClassName('container__review__button')[0];
 clickButton.addEventListener('click', () => {
     let review = document.getElementById('text').value
     document.getElementsByClassName('container__feedback__main__review')[0].innerHTML = `<p>${review}</p>`
@@ -45,3 +47,30 @@ clickClose.addEventListener('click', () => {
         document.getElementsByClassName('clickLi')[i].style.backgroundColor = 'beige'
     }
 })
+ */
+let comments = [];
+let clickButton = document.getElementsByClassName('container__review__button')[0];
+clickButton.addEventListener('click', () => {
+    console.log();
+    let text = document.getElementById('text').value;
+    let info = {
+        content : text,
+        score : number,
+        id : Math.floor(Math.random()*54321)
+    }
+    comments.push(info);
+    console.log(comments);
+})
+renderComment = () => {
+    let result = '';
+    for(let i = 0 ; i < comments.length;i++){
+        result += `<ul>
+        <li>${comments[i].score}</li>
+        <p>${comments[i].content}</p>
+        <button>edit</button>
+        <button>delete</button>
+        </ul>`
+    }
+    document.getElementsByClassName('container__feedback')[0].innerHTML = result
+}
+    
